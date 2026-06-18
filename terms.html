@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniCart - Terms of Service | Unified Commerce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafbfc;
+      color: #171717;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header styles (matching homepage) */
+    .top-bar {
+      background: #0b2b26;
+      color: #e7f0ed;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 8px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      background: #d9f0ec;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .logo-text h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1e4a4a, #2c7a6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo-text span {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #5c6e6b;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1f2e2b;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f7b6e;
+    }
+    .cart-icon {
+      background: #eef3f1;
+      padding: 8px 14px;
+      border-radius: 40px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    /* terms specific styles */
+    .terms-hero {
+      background: linear-gradient(120deg, #eef7f3 0%, #ffffff 100%);
+      border-radius: 36px;
+      padding: 48px 48px;
+      margin: 32px 0 40px;
+      text-align: center;
+    }
+    .terms-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #102e29;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .terms-hero p {
+      font-size: 1.1rem;
+      color: #4a6a64;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .last-updated {
+      display: inline-block;
+      background: #e2efeb;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      margin-top: 24px;
+      color: #1f6e62;
+      font-weight: 500;
+    }
+
+    .terms-content {
+      background: white;
+      border-radius: 32px;
+      padding: 48px 52px;
+      margin-bottom: 64px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+      border: 1px solid #eaf1ef;
+    }
+
+    .terms-section {
+      margin-bottom: 42px;
+    }
+    .terms-section:last-child {
+      margin-bottom: 0;
+    }
+    .terms-section h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #0f3e37;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #d9f0ec;
+      display: inline-block;
+    }
+    .terms-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #1f5a50;
+    }
+    .terms-section p {
+      margin-bottom: 16px;
+      color: #2e3e3a;
+    }
+    .terms-section ul, .terms-section ol {
+      margin: 16px 0 16px 28px;
+      color: #2e3e3a;
+    }
+    .terms-section li {
+      margin-bottom: 8px;
+    }
+    .legal-note {
+      background: #f6fbf9;
+      padding: 24px 28px;
+      border-radius: 24px;
+      margin-top: 32px;
+      border-left: 4px solid #2c7a6e;
+    }
+    .legal-note p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* back to shop button */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1f6e62;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 48px;
+      font-weight: 600;
+      transition: 0.2s;
+      margin-top: 16px;
+    }
+    .back-link:hover {
+      background: #0f554a;
+      transform: translateY(-2px);
+    }
+
+    /* footer matching home */
+    footer {
+      background: #0f2c27;
+      color: #cddfdb;
+      margin-top: 20px;
+      padding: 48px 0 30px;
+      border-radius: 32px 32px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .footer-col p, .footer-col li {
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #2a534a;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 780px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .terms-content {
+        padding: 32px 24px;
+      }
+      .terms-hero {
+        padding: 32px 24px;
+      }
+      .terms-hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar">
+  🌟 LEGAL & TRANSPARENCY — UNICART TERMS OF SERVICE 
+</div>
+<div class="container">
+  <header>
+    <div class="navbar">
+      <a href="#" class="logo-area" id="homeLink" style="text-decoration: none;">
+        <div class="logo-icon">🛒</div>
+        <div class="logo-text">
+          <h1>UniCart</h1>
+          <span>smart choices · unified style</span>
+        </div>
+      </a>
+      <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        <div class="cart-icon">
+          🛍️ Cart <span style="background:#1f6e62;color:white;padding:2px 8px;border-radius:30px;">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Terms hero section -->
+  <div class="terms-hero">
+    <h1>Terms of Service</h1>
+    <p>Welcome to UniCart — a unified marketplace built on trust, originality, and fairness. Please read these Terms carefully before using our platform.</p>
+    <div class="last-updated">📅 Last updated: June 15, 2026</div>
+  </div>
+
+  <!-- Main terms content block -->
+  <div class="terms-content">
+    <div class="terms-section">
+      <h2>1. Agreement to Terms</h2>
+      <p>By accessing or using the UniCart website, mobile application, or any related services (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to all the Terms, you may not access or use the Service. UniCart reserves the right to update or modify these Terms at any time without prior notice. Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>2. Eligibility & Account Registration</h2>
+      <p>To use certain features of UniCart, you must register for an account. You represent and warrant that:</p>
+      <ul>
+        <li>You are at least 18 years old or the age of majority in your jurisdiction.</li>
+        <li>All registration information you provide is accurate, current, and complete.</li>
+        <li>You will maintain the security of your account and promptly notify UniCart of any unauthorized use.</li>
+        <li>You are solely responsible for all activities that occur under your account.</li>
+      </ul>
+      <p>UniCart reserves the right to refuse service, terminate accounts, or remove or edit content at our sole discretion.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>3. Products, Pricing, and Availability</h2>
+      <p>UniCart strives to display accurate product descriptions, images, and pricing. However, we do not warrant that product descriptions or other content on the Service are error-free, complete, or current. If a product offered by UniCart is not as described, your sole remedy is to return it in unused condition in accordance with our Return Policy.</p>
+      <h3>3.1 Pricing & Taxes</h3>
+      <p>All prices are listed in USD and do not include applicable taxes, shipping, or handling fees unless stated otherwise. UniCart reserves the right to adjust prices, promotions, and availability at any time without prior notice. In the event of a pricing error, we may cancel or refuse any orders placed at the incorrect price.</p>
+      <h3>3.2 Limited Quantities</h3>
+      <p>Some items, especially limited-edition or exclusive drops ("UniUnique Collection"), may have limited quantities. UniCart cannot guarantee that an item will be in stock at the time of order. We reserve the right to limit quantities per person or per order.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>4. Orders & Payments</h2>
+      <p>When you place an order on UniCart, you are making an offer to purchase the selected products. We reserve the right to accept or reject any order for any reason, including product unavailability, payment issues, or suspected fraud. After order confirmation, you will receive an email with order details.</p>
+      <ul>
+        <li><strong>Payment methods:</strong> We accept major credit cards, digital wallets, and UniCart gift cards.</li>
+        <li><strong>Order modifications:</strong> Once an order is confirmed, changes may not be possible. Please contact support within 2 hours of placing the order.</li>
+        <li><strong>Billing information:</strong> You agree to provide current, complete, and accurate purchase and account information.</li>
+      </ul>
+    </div>
+
+    <div class="terms-section">
+      <h2>5. Shipping, Delivery & Risk of Loss</h2>
+      <p>Shipping times are estimates and may vary due to carrier delays or other events outside our control. Title and risk of loss for products pass to you upon delivery to the carrier. UniCart is not liable for any delays, lost, or damaged goods after shipment, but we will assist you with claim support for eligible orders. For full details, please see our Shipping Policy.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>6. Returns, Refunds, and Warranty</h2>
+      <p>UniCart offers a 30-day return window for most unused items in original packaging. Certain products (e.g., final sale items, perishable goods, personalized products) are non-returnable. To initiate a return, visit your order history or contact our support team. Refunds will be issued to the original payment method within 14 business days after we receive and inspect the returned product.</p>
+      <p>Products sold by third-party sellers on UniCart may have separate warranty and return policies. UniCart acts as a platform facilitator and is not responsible for third-party seller performance, though we will mediate disputes to ensure fair resolution.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>7. Intellectual Property & User Content</h2>
+      <p>All content on the UniCart platform — including but not limited to text, graphics, logos, images, product designs, and software — is the property of UniCart or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works without explicit written permission.</p>
+      <p>By posting reviews, comments, or other content ("User Content"), you grant UniCart a non-exclusive, royalty-free, perpetual, and worldwide license to use, modify, publish, and display such content in connection with the Service. You represent that you own or have permission to share the User Content.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>8. Prohibited Activities</h2>
+      <p>You agree not to engage in any of the following prohibited activities:</p>
+      <ul>
+        <li>Violating any applicable law or regulation.</li>
+        <li>Impersonating another person or entity, or providing false information.</li>
+        <li>Interfering with the security or integrity of the Service (e.g., hacking, DDoS, scraping).</li>
+        <li>Using bots, crawlers, or other automated means to access UniCart without prior permission.</li>
+        <li>Uploading malicious code, viruses, or other harmful components.</li>
+        <li>Engaging in any activity that disrupts or imposes an unreasonable burden on our infrastructure.</li>
+      </ul>
+      <p>Violation of these rules may result in immediate termination of your account and legal action.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>9. Disclaimers & Limitation of Liability</h2>
+      <p>UNICART PROVIDES THE SERVICE ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, SECURE, OR FREE OF ERRORS.</p>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, UNICART SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (A) YOUR USE OR INABILITY TO USE THE SERVICE; (B) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICE; (C) UNAUTHORIZED ACCESS, USE OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT.</p>
+      <div class="legal-note">
+        <p><strong>Note for consumers:</strong> Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for incidental or consequential damages, so the above limitations may not apply to you. In such jurisdictions, UniCart's liability is limited to the fullest extent permitted by law.</p>
+      </div>
+    </div>
+
+    <div class="terms-section">
+      <h2>10. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless UniCart and its officers, directors, employees, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to (a) your use of the Service; (b) any User Content you provide; (c) your violation of these Terms; or (d) your violation of any rights of another party.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>11. Third-Party Links & Sellers</h2>
+      <p>UniCart may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. Additionally, some products on UniCart are sold by independent sellers ("Marketplace Partners"). UniCart facilitates the transaction but the contract of sale is directly between you and the seller. Any disputes regarding such products should be first directed to the seller, with UniCart available to mediate as needed.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>12. Termination</h2>
+      <p>UniCart may suspend or terminate your access to the Service at any time, with or without cause or notice, effective immediately. Upon termination, your right to use the Service will cease immediately. Sections that by their nature should survive termination shall survive (including Intellectual Property, Disclaimer, Indemnification, and Limitation of Liability).</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>13. Governing Law & Dispute Resolution</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws principles. Any dispute arising from or relating to these Terms or the Service shall be resolved exclusively through binding arbitration administered by the American Arbitration Association (AAA), in accordance with its Consumer Arbitration Rules. The arbitration shall take place in Wilmington, Delaware, and judgment on the arbitration award may be entered in any court having jurisdiction. You agree to waive any right to a jury trial or to participate in a class action.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>14. Miscellaneous</h2>
+      <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that the Terms shall otherwise remain in full force and effect. The failure of UniCart to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision. These Terms constitute the entire agreement between you and UniCart regarding the Service and supersede any prior agreements.</p>
+    </div>
+
+    <!-- Contact / questions block -->
+    <div class="legal-note">
+      <p><strong>📬 Questions about these Terms?</strong> We’re here to help. Please contact our Legal & Compliance team at <strong>legal@unicart.com</strong> or via mail at: UniCart Legal, 123 Commerce Lane, Suite 400, Wilmington, DE 19801, USA.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="#" class="back-link" id="backToHomeBtn">← Back to UniCart Homepage</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>UniCart</h4>
+        <p>Redefining e‑commerce with unique design & conscious curation.</p>
+      </div>
+      <div class="footer-col">
+        
+    </div>
+    <div class="copyright">
+      © 2026 UniCart — Unique finds, unified cart. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple interactive elements: cart counter simulation (same as home page for consistency)
+  let cartCount = 0;
+  const cartSpan = document.querySelector('.cart-icon span');
+  if (cartSpan) {
+    cartSpan.innerText = cartCount;
+  }
+
+  // Optional: Add a small demo effect on cart icon click to show it's interactive
+  const cartIconDiv = document.querySelector('.cart-icon');
+  if (cartIconDiv) {
+    cartIconDiv.addEventListener('click', (e) => {
+      e.preventDefault();
+      const toast = document.createElement('div');
+      toast.innerText = `🛒 Your cart is currently empty — explore unique deals!`;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '24px';
+      toast.style.right = '24px';
+      toast.style.backgroundColor = '#1f6e62';
+      toast.style.color = 'white';
+      toast.style.padding = '12px 24px';
+      toast.style.borderRadius = '60px';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '999';
+      toast.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transition='0.2s'; setTimeout(() => toast.remove(), 500); }, 2000);
+    });
+  }
+
+  // navigation simulation: homepage link + back to home button
+  const homeLink = document.getElementById('homeLink');
+  const backBtn = document.getElementById('backToHomeBtn');
+  function goToHomepage() {
+    alert("✨ Returning to UniCart Homepage — discover unique products and offers!");
+    window.location.href = "index.html";   // in real environment would redirect to actual homepage
+    // For demo purposes: if running on file system, you can simulate or just show message.
+    // but we provide fallback for usability.
+  }
+  if (homeLink) homeLink.addEventListener('click', (e) => { e.preventDefault(); goToHomepage(); });
+  if (backBtn) backBtn.addEventListener('click', (e) => { e.preventDefault(); goToHomepage(); });
+
+  // small highlight for footer legal link to stay on terms (self reference)
+  const termsFooterLink = document.querySelector('a[href="#"]');
+  if(termsFooterLink && termsFooterLink.innerText.includes('Terms')) {
+    termsFooterLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Optional: Add scroll effect for smooth reading
+  console.log("UniCart Terms of Service page — ready.");
+</script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>UniCart — About Us | The Story Behind Unified Commerce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafbfc;
+      color: #171717;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header styles (consistent across all pages) */
+    .top-bar {
+      background: #0b2b26;
+      color: #e7f0ed;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 8px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      background: #d9f0ec;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .logo-text h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1e4a4a, #2c7a6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo-text span {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #5c6e6b;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1f2e2b;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f7b6e;
+    }
+    .cart-icon {
+      background: #eef3f1;
+      padding: 8px 14px;
+      border-radius: 40px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* about hero section */
+    .about-hero {
+      background: linear-gradient(135deg, #eef7f3 0%, #ffffff 100%);
+      border-radius: 36px;
+      padding: 56px 48px;
+      margin: 32px 0 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 48px;
+    }
+    .about-hero-content {
+      flex: 1.2;
+    }
+    .about-hero-content .tag {
+      background: #cfe9e4;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #115c50;
+      margin-bottom: 20px;
+    }
+    .about-hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #102e29;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .about-hero-content p {
+      font-size: 1.1rem;
+      color: #3b4e4a;
+      margin-bottom: 24px;
+      max-width: 550px;
+    }
+    .about-hero-image {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+    }
+    .about-hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* mission banner */
+    .mission-banner {
+      background: #0f2c27;
+      color: white;
+      border-radius: 36px;
+      padding: 56px 48px;
+      margin: 32px 0 48px;
+      text-align: center;
+    }
+    .mission-banner h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+    }
+    .mission-banner p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* values grid */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 48px 0 32px 0;
+      color: #102e29;
+      text-align: center;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-bottom: 56px;
+    }
+    .value-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: 0.25s ease;
+      border: 1px solid #eaf1ef;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: #c0dfd8;
+      box-shadow: 0 20px 30px -12px rgba(31,110,98,0.12);
+    }
+    .value-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .value-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1b6b5e;
+      margin-bottom: 12px;
+    }
+    .value-card p {
+      color: #4a6a64;
+      line-height: 1.5;
+    }
+
+    /* team section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin: 40px 0 60px;
+    }
+    .team-card {
+      text-align: center;
+    }
+    .team-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 12px 22px -8px rgba(0,0,0,0.1);
+      border: 3px solid #d9f0ec;
+    }
+    .team-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1f4e46;
+    }
+    .team-card p {
+      color: #6f8f88;
+      margin-top: 6px;
+    }
+
+    /* journey timeline */
+    .journey {
+      background: #f4faf7;
+      border-radius: 36px;
+      padding: 48px 40px;
+      margin: 48px 0;
+    }
+    .journey h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0f3e37;
+    }
+    .timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .timeline-item {
+      flex: 1;
+      min-width: 160px;
+      text-align: center;
+      background: white;
+      padding: 24px 16px;
+      border-radius: 28px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+    }
+    .timeline-year {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #2c7a6e;
+      margin-bottom: 12px;
+    }
+    .timeline-desc {
+      font-weight: 500;
+      color: #2c5a52;
+    }
+
+    /* cta section */
+    .cta-about {
+      background: linear-gradient(120deg, #d9f0ec, #c4e3dc);
+      border-radius: 36px;
+      padding: 56px 40px;
+      text-align: center;
+      margin: 48px 0 24px;
+    }
+    .cta-about h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0b2b26;
+      margin-bottom: 16px;
+    }
+    .cta-about p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto 28px;
+      color: #255a50;
+    }
+    .cta-btn {
+      background: #1f6e62;
+      color: white;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .cta-btn:hover {
+      background: #0f554a;
+      transform: translateY(-2px);
+    }
+
+    /* footer */
+    footer {
+      background: #0f2c27;
+      color: #cddfdb;
+      margin-top: 64px;
+      padding: 48px 0 30px;
+      border-radius: 32px 32px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .footer-col p, .footer-col li {
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #2a534a;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 780px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .about-hero {
+        padding: 32px 24px;
+      }
+      .about-hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .mission-banner {
+        padding: 40px 24px;
+      }
+      .timeline {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar">
+  🌟 UNICART — BUILT FOR UNIQUE MINDS, SUSTAINABLE VALUES, AND GLOBAL COMMUNITY
+</div>
+<div class="container">
+  <header>
+    <div class="navbar">
+      <div class="logo-area" id="homeLink">
+        <div class="logo-icon">🛒</div>
+        <div class="logo-text">
+          <h1>UniCart</h1>
+          <span>smart choices · unified style</span>
+        </div>
+      </div>
+      <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        <div class="cart-icon" id="cartTrigger">
+          🛍️ Cart <span style="background:#1f6e62;color:white;padding:2px 8px;border-radius:30px;">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero about section -->
+  <div class="about-hero">
+    <div class="about-hero-content">
+      <div class="tag">✨ Our story</div>
+      <h1>More than a marketplace.<br>A movement for unique living.</h1>
+      <p>UniCart was born from the idea that shopping should feel personal, inspiring, and effortless — while celebrating creators and conscious choices.</p>
+      <button class="cta-btn" id="meetTeamBtn" style="background:#1f6e62; padding:12px 28px;">Meet the team →</button>
+    </div>
+    <div class="about-hero-image">
+      <img src="https://picsum.photos/id/106/600/450" alt="UniCart team and creative workspace" onerror="this.src='https://picsum.photos/id/20/600/450'">
+    </div>
+  </div>
+
+  <!-- Mission banner -->
+  <div class="mission-banner">
+    <h2>🎯 Our mission: unify creativity & commerce</h2>
+    <p>We empower independent brands, curate extraordinary products, and build a seamless platform where every cart tells a story — without compromising ethics or design.</p>
+  </div>
+
+  <!-- Core values -->
+  <div class="section-title">What makes us UniCart</div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🌱</div>
+      <h3>Sustainable first</h3>
+      <p>Carbon-neutral shipping, eco-friendly packaging, and partnerships with ethical manufacturers.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🎨</div>
+      <h3>Uniquely curated</h3>
+      <p>Every product on UniCart is handpicked for originality, quality, and design — no mass-market clones.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <h3>Community-led</h3>
+      <p>We listen, adapt, and grow with our shoppers and sellers. Your voice shapes our roadmap.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🔒</div>
+      <h3>Radical trust</h3>
+      <p>Transparent pricing, buyer protection, and zero hidden fees — because trust is non-negotiable.</p>
+    </div>
+  </div>
+
+  <!-- Journey timeline -->
+  <div class="journey">
+    <h2>📖 The UniCart journey</h2>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-year">2021</div><div class="timeline-desc">Idea sparks in a small design studio — frustration with boring e‑commerce.</div></div>
+      <div class="timeline-item"><div class="timeline-year">2023</div><div class="timeline-desc">Beta launch with 50 indie brands, 1,000 early unicorn users.</div></div>
+      <div class="timeline-item"><div class="timeline-year">2025</div><div class="timeline-desc">UniCart+ membership & global shipping to 30+ countries.</div></div>
+      <div class="timeline-item"><div class="timeline-year">2026+</div><div class="timeline-desc">Building the future of unified, joyful commerce.</div></div>
+    </div>
+  </div>
+
+  <!-- Meet the hearts behind UniCart -->
+  <div class="section-title">❤️ Meet the creators</div>
+  <div class="team-grid">
+    <div class="team-card">
+      <img class="team-img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Founder portrait">
+      <h4>Maya Chen</h4>
+      <p>Co-founder & CEO — ex-designer, dreamer of ethical retail.</p>
+    </div>
+    <div class="team-card">
+      <img class="team-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="CTO">
+      <h4>James Okafor</h4>
+      <p>Co-founder & CTO — tech for good, seamless experiences.</p>
+    </div>
+    <div class="team-card">
+      <img class="team-img" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Creative director">
+      <h4>Elena Vasquez</h4>
+      <p>Creative Director — curator of unique aesthetics.</p>
+    </div>
+    <div class="team-card">
+      <img class="team-img" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Community lead">
+      <h4>David Kim</h4>
+      <p>Head of Community — making every voice count.</p>
+    </div>
+  </div>
+
+  <!-- Impact numbers (optional unique stat section) -->
+  <div class="values-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 0;">
+    <div class="value-card"><div class="value-icon">📦</div><h3>150k+</h3><p>Happy customers worldwide</p></div>
+    <div class="value-card"><div class="value-icon">🏷️</div><h3>800+</h3><p>Unique brand partners</p></div>
+    <div class="value-card"><div class="value-icon">🌎</div><h3>35+</h3><p>Countries shipped to</p></div>
+    <div class="value-card"><div class="value-icon">♻️</div><h3>92%</h3><p>Zero-waste operations</p></div>
+  </div>
+
+  <!-- Call to action -->
+  <div class="cta-about">
+    <h3>Become part of the story</h3>
+    <p>Whether you're a creator, shopper, or dreamer — UniCart welcomes you.</p>
+    <button class="cta-btn" id="joinButton">Join the community →</button>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>UniCart</h4>
+        <p>Redefining e‑commerce with unique design & conscious curation.</p>
+      </div>
+      <div class="footer-col">
+        
+    </div>
+    <div class="copyright">
+      © 2026 UniCart — Unique finds, unified cart. Built with purpose.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Cart counter (demo interactive)
+  let cartCount = 0;
+  const cartSpan = document.querySelector('.cart-icon span');
+  if (cartSpan) cartSpan.innerText = cartCount;
+
+  const cartTrigger = document.getElementById('cartTrigger');
+  if (cartTrigger) {
+    cartTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const toast = document.createElement('div');
+      toast.innerText = `🛍️ Your UniCart cart awaits — explore unique finds!`;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '24px';
+      toast.style.right = '24px';
+      toast.style.backgroundColor = '#1f6e62';
+      toast.style.color = 'white';
+      toast.style.padding = '12px 24px';
+      toast.style.borderRadius = '60px';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '999';
+      toast.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = '0.2s'; setTimeout(() => toast.remove(), 500); }, 2000);
+    });
+  }
+
+  // home redirection simulation
+  const homeLink = document.getElementById('homeLink');
+  function goHome() {
+    alert("✨ Welcome back to UniCart — discover unique products and stories.");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (homeLink) homeLink.addEventListener('click', (e) => { e.preventDefault(); goHome(); });
+
+  // meet team button smooth scroll to team section
+  const meetBtn = document.getElementById('meetTeamBtn');
+  if (meetBtn) {
+    meetBtn.addEventListener('click', () => {
+      const teamSection = document.querySelector('.team-grid');
+      if (teamSection) teamSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      else window.scrollTo({ top: 800, behavior: 'smooth' });
+    });
+  }
+
+  // join button demo
+  const joinBtn = document.getElementById('joinButton');
+  if (joinBtn) {
+    joinBtn.addEventListener('click', () => {
+      alert("🎉 Thanks for your interest! UniCart community events, early access, and insider drops — sign up soon.");
+    });
+  }
+
+  // small footer interactions
+  const footerAboutLink = document.querySelector('.footer-col li');
+  if (footerAboutLink && footerAboutLink.innerText.includes('About Us')) {
+    footerAboutLink.style.cursor = 'default';
+  }
+  console.log("UniCart About Us — creativity meets commerce.");
+</script>
+</body>
+</html>

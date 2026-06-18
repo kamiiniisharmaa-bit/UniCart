@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>UniCart — Privacy Policy | Your Data, Our Promise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafbfc;
+      color: #171717;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header styles (consistent with homepage & terms) */
+    .top-bar {
+      background: #0b2b26;
+      color: #e7f0ed;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 8px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      background: #d9f0ec;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .logo-text h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1e4a4a, #2c7a6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo-text span {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #5c6e6b;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1f2e2b;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f7b6e;
+    }
+    .cart-icon {
+      background: #eef3f1;
+      padding: 8px 14px;
+      border-radius: 40px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* privacy hero section */
+    .privacy-hero {
+      background: linear-gradient(125deg, #eef7f3 0%, #ffffff 80%);
+      border-radius: 36px;
+      padding: 48px 48px;
+      margin: 32px 0 40px;
+      text-align: center;
+    }
+    .privacy-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #102e29;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .privacy-hero p {
+      font-size: 1.1rem;
+      color: #4a6a64;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .badge-date {
+      display: inline-block;
+      background: #e2efeb;
+      padding: 6px 20px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      margin-top: 24px;
+      color: #1f6e62;
+      font-weight: 500;
+    }
+
+    /* main privacy content */
+    .privacy-content {
+      background: white;
+      border-radius: 32px;
+      padding: 48px 52px;
+      margin-bottom: 64px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+      border: 1px solid #eaf1ef;
+    }
+    .privacy-section {
+      margin-bottom: 44px;
+    }
+    .privacy-section h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #0f3e37;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #d9f0ec;
+      display: inline-block;
+    }
+    .privacy-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #1f5a50;
+    }
+    .privacy-section p {
+      margin-bottom: 16px;
+      color: #2e3e3a;
+    }
+    .privacy-section ul, .privacy-section ol {
+      margin: 16px 0 16px 28px;
+      color: #2e3e3a;
+    }
+    .privacy-section li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: #f6fbf9;
+      padding: 24px 28px;
+      border-radius: 24px;
+      margin: 24px 0 16px;
+      border-left: 4px solid #2c7a6e;
+    }
+    .data-table {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e2efe9;
+    }
+    th {
+      background-color: #eef4f2;
+      font-weight: 600;
+      color: #1a4e45;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1f6e62;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 48px;
+      font-weight: 600;
+      transition: 0.2s;
+      margin-top: 16px;
+    }
+    .back-link:hover {
+      background: #0f554a;
+      transform: translateY(-2px);
+    }
+
+    /* footer */
+    footer {
+      background: #0f2c27;
+      color: #cddfdb;
+      margin-top: 20px;
+      padding: 48px 0 30px;
+      border-radius: 32px 32px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .footer-col p, .footer-col li {
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #2a534a;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 780px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .privacy-content {
+        padding: 32px 24px;
+      }
+      .privacy-hero {
+        padding: 32px 24px;
+      }
+      .privacy-hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar">
+  🔒 YOUR PRIVACY IS PRIORITY — UNICART PROTECTS YOUR DATA
+</div>
+<div class="container">
+  <header>
+    <div class="navbar">
+      <div class="logo-area" id="homeLink">
+        <div class="logo-icon">🛒</div>
+        <div class="logo-text">
+          <h1>UniCart</h1>
+          <span>smart choices · unified style</span>
+        </div>
+      </div>
+      <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        <div class="cart-icon" id="cartToastTrigger">
+          🛍️ Cart <span style="background:#1f6e62;color:white;padding:2px 8px;border-radius:30px;">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Privacy Hero -->
+  <div class="privacy-hero">
+    <h1>Privacy Policy</h1>
+    <p>At UniCart, we believe in radical transparency. This policy explains how we collect, use, and safeguard your personal information — because your trust is the foundation of our marketplace.</p>
+    <div class="badge-date">📅 Effective: June 15, 2026 | Last revised: June 15, 2026</div>
+  </div>
+
+  <!-- Main Privacy Content -->
+  <div class="privacy-content">
+    <div class="privacy-section">
+      <h2>1. Information We Collect</h2>
+      <p>UniCart collects information to provide better services to all our users — from browsing unique products to delivering your orders. We collect the following categories of data:</p>
+      <div class="data-table">
+        <table>
+          <thead>
+            <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Identity & Contact</td><td>Name, email address, phone number, shipping/billing address</td><td>Account creation, order fulfillment, customer support</td></tr>
+            <tr><td>Payment Information</td><td>Credit/debit card details, digital wallet tokens (processed via PCI-compliant partners)</td><td>Payment processing & fraud prevention</td></tr>
+            <tr><td>Transaction Data</td><td>Products viewed, purchase history, cart activity, saved items</td><td>Personalized recommendations & order history</td></tr>
+            <tr><td>Technical Data</td><td>IP address, browser type, device identifiers, cookies, log data</td><td>Site security, analytics, performance improvements</td></tr>
+            <tr><td>Communications</td><td>Customer support chats, reviews, survey responses</td><td>Resolve issues, improve marketplace, and build community</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>We never intentionally collect sensitive data (like precise geolocation, health info, or biometric data) without explicit consent.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>2. How We Use Your Information</h2>
+      <p>UniCart uses your personal data only for legitimate business purposes, including:</p>
+      <ul>
+        <li><strong>Order fulfillment:</strong> Process payments, ship products, and provide order updates.</li>
+        <li><strong>Personalization:</strong> Tailor product recommendations, offers, and content based on your preferences.</li>
+        <li><strong>Customer support:</strong> Respond to inquiries, handle returns, and resolve disputes.</li>
+        <li><strong>Security & fraud detection:</strong> Monitor suspicious activity, prevent unauthorized access, and protect against fraud.</li>
+        <li><strong>Marketing & communication:</strong> With your consent, send promotional emails, unique deals, and newsletters. You can opt out anytime.</li>
+        <li><strong>Legal compliance:</strong> Comply with applicable laws, regulations, and enforce our Terms of Service.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section">
+      <h2>3. Legal Basis for Processing (GDPR & Global Standards)</h2>
+      <p>If you reside in the European Economic Area (EEA) or other regions with specific data protection laws, we process your personal data based on the following legal grounds:</p>
+      <ul>
+        <li><strong>Contractual necessity:</strong> To fulfill orders and provide services you request.</li>
+        <li><strong>Legitimate interests:</strong> To improve our platform, prevent fraud, and conduct analytics.</li>
+        <li><strong>Consent:</strong> For marketing communications and optional cookies.</li>
+        <li><strong>Legal obligations:</strong> To comply with tax, anti-fraud, and record-keeping laws.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section">
+      <h2>4. Sharing & Disclosure of Information</h2>
+      <p>UniCart values your privacy and does not sell your personal data to third parties. However, we may share information in the following limited scenarios:</p>
+      <ul>
+        <li><strong>Service providers:</strong> Trusted partners who help with payment processing, shipping, email delivery, and analytics (under strict confidentiality agreements).</li>
+        <li><strong>Marketplace sellers:</strong> When you purchase from third-party sellers, we share necessary order details (name, address, product) to fulfill shipment.</li>
+        <li><strong>Legal requirements:</strong> If required by law, subpoena, or governmental request, or to protect the rights and safety of UniCart, our users, or the public.</li>
+        <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction (with notice).</li>
+      </ul>
+      <div class="highlight-box">
+        <p>🔐 <strong>Your data, your control.</strong> We never share sensitive payment information directly with sellers — all payments are tokenized and encrypted via PCI Level-1 gateways.</p>
+      </div>
+    </div>
+
+    <div class="privacy-section">
+      <h2>5. Cookies & Similar Tracking Technologies</h2>
+      <p>We use cookies, web beacons, and similar technologies to enhance your experience, analyze trends, and personalize content. Cookies are small text files stored on your device. You can manage cookie preferences via your browser settings. Essential cookies cannot be disabled as they ensure core functionality (e.g., cart, login).</p>
+      <h3>Types of cookies we use:</h3>
+      <ul>
+        <li><strong>Essential:</strong> Required for navigation, security, and shopping cart.</li>
+        <li><strong>Analytics/Performance:</strong> Help us understand how visitors interact with UniCart (e.g., Google Analytics).</li>
+        <li><strong>Functional:</strong> Remember your preferences (language, currency).</li>
+        <li><strong>Targeting/Advertising:</strong> Used to show relevant product recommendations and measure ad campaigns (only with consent).</li>
+      </ul>
+      <p>By continuing to use UniCart, you consent to our use of cookies as described, except where you have configured your browser to reject them.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>6. Data Retention</h2>
+      <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. For example:</p>
+      <ul>
+        <li>Account information is kept while your account is active and for a reasonable period afterward for legal or tax reasons (typically 6-7 years for transaction records).</li>
+        <li>Marketing preferences are retained until you opt out or request deletion.</li>
+        <li>Cookie-related data is retained per your browser settings.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section">
+      <h2>7. Your Privacy Rights & Choices</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access & Portability:</strong> Request a copy of your personal data in a structured format.</li>
+        <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+        <li><strong>Deletion (Right to be forgotten):</strong> Request deletion of your data, subject to legal obligations.</li>
+        <li><strong>Restriction & Objection:</strong> Limit how we process your data for certain purposes (e.g., direct marketing).</li>
+        <li><strong>Withdraw Consent:</strong> For any processing based on consent, you may withdraw at any time.</li>
+      </ul>
+      <p>To exercise these rights, contact us at <strong>privacy@unicart.com</strong> or via the methods below. We will respond within 30 days. We will never discriminate against you for exercising your privacy rights.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>8. Children's Privacy</h2>
+      <p>UniCart does not knowingly sell products to minors or collect personal information from anyone under the age of 16. If we discover that a child under 16 has provided us with personal data, we will delete it immediately. Parents or guardians who believe their child has submitted information should contact us.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>9. Security Measures</h2>
+      <p>We implement industry-standard security safeguards to protect your information: encryption (TLS 1.3) for data in transit, AES-256 for stored sensitive data, regular vulnerability scans, and restricted access to personal data on a need-to-know basis. However, no method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>10. International Data Transfers</h2>
+      <p>UniCart operates globally. Your information may be transferred to and processed in countries other than your own, including the United States. For users in the EEA, UK, or Switzerland, we ensure appropriate safeguards such as Standard Contractual Clauses (SCCs) or equivalent protections.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>11. Third-Party Links & Embedded Content</h2>
+      <p>Our platform may contain links to external websites (e.g., brand pages, social media) or embedded content (e.g., YouTube videos). These third parties have their own privacy policies, and UniCart is not responsible for their practices. We encourage you to review their policies before interacting.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal obligations. The "Effective Date" at the top indicates when the latest version was posted. If material changes occur, we will notify you via email or a prominent notice on our website before the changes become effective.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>13. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data handling practices, please reach out to our Data Protection team:</p>
+      <ul>
+        <li>Email: <strong>privacy@unicart.com</strong></li>
+        <li>Mail: UniCart Privacy Office, 123 Commerce Lane, Suite 400, Wilmington, DE 19801, USA</li>
+        <li>For EU residents: You may also lodge a complaint with your local Data Protection Authority (DPA).</li>
+      </ul>
+      <div class="highlight-box">
+        <p>💚 <strong>UniCart Promise:</strong> We treat your data like our own — with respect, integrity, and protection. No shady selling, no hidden trackers.</p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="#" class="back-link" id="backToHomeBtn">🏠 Return to UniCart Home</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>UniCart</h4>
+        <p>Redefining e‑commerce with unique design & conscious curation.</p>
+      </div>
+      <div class="footer-col">
+        
+    </div>
+    <div class="copyright">
+      © 2026 UniCart — Unique finds, unified cart. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple cart counter demo (matches homepage/terms style)
+  let cartCount = 0;
+  const cartSpan = document.querySelector('.cart-icon span');
+  if (cartSpan) cartSpan.innerText = cartCount;
+
+  // Cart click notification
+  const cartIconDiv = document.getElementById('cartToastTrigger');
+  if (cartIconDiv) {
+    cartIconDiv.addEventListener('click', (e) => {
+      e.preventDefault();
+      const toast = document.createElement('div');
+      toast.innerText = `🛍️ Your UniCart cart is ready — discover unique items!`;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '24px';
+      toast.style.right = '24px';
+      toast.style.backgroundColor = '#1f6e62';
+      toast.style.color = 'white';
+      toast.style.padding = '12px 24px';
+      toast.style.borderRadius = '60px';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '999';
+      toast.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = '0.2s'; setTimeout(() => toast.remove(), 500); }, 2000);
+    });
+  }
+
+  // home redirection simulation
+  const homeLink = document.getElementById('homeLink');
+  const backBtn = document.getElementById('backToHomeBtn');
+  function goHome() {
+    alert("✨ Welcome back to UniCart — Your trusted marketplace for unique finds.");
+    // In real environment: window.location.href = "index.html";
+    // For demo, we scroll top and show message.
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (homeLink) homeLink.addEventListener('click', (e) => { e.preventDefault(); goHome(); });
+  if (backBtn) backBtn.addEventListener('click', (e) => { e.preventDefault(); goHome(); });
+
+  // small interactive for footer links (just demo awareness)
+  const footerLinks = document.querySelectorAll('.footer-col li');
+  footerLinks.forEach(link => {
+    if (link.innerText.includes('Privacy Policy')) {
+      link.style.cursor = 'default';
+    }
+  });
+  console.log("UniCart Privacy Policy — Your data is respected.");
+</script>
+</body>
+</html>

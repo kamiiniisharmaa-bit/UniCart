@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>UniCart — Smart Shopping, Unified Style</title>
+  <!-- Google Fonts + simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafbfc;
+      color: #171717;
+      line-height: 1.4;
+    }
+
+    /* container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== HEADER ========== */
+    .top-bar {
+      background: #0b2b26;
+      color: #e7f0ed;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 8px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      background: #d9f0ec;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+
+    .logo-text h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1e4a4a, #2c7a6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo-text span {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #5c6e6b;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1f2e2b;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f7b6e;
+    }
+    .cart-icon {
+      background: #eef3f1;
+      padding: 8px 14px;
+      border-radius: 40px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(105deg, #eef7f3 0%, #ffffff 70%);
+      border-radius: 36px;
+      margin: 32px 0 48px;
+      padding: 48px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
+    }
+    .hero-content {
+      flex: 1.2;
+      min-width: 260px;
+    }
+    .hero-content .badge {
+      background: #cfe9e4;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #115c50;
+      margin-bottom: 20px;
+    }
+    .hero-content h2 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+      color: #102e29;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #3b4e4a;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #1f6e62;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 48px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .btn-primary:hover {
+      background: #0f554a;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #1f6e62;
+      color: #1f6e62;
+      padding: 12px 28px;
+      border-radius: 48px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .hero-image {
+      flex: 0.9;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 42px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+      object-fit: cover;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    /* categories strip */
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin: 56px 0 24px 0;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .section-title span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #2c7a6e;
+      cursor: pointer;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 28px;
+      margin-bottom: 20px;
+    }
+    .category-card {
+      background: white;
+      border-radius: 32px;
+      text-align: center;
+      padding: 24px 12px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+      border: 1px solid #eaf1ef;
+    }
+    .category-card:hover {
+      transform: translateY(-6px);
+      border-color: #c0dfd8;
+      box-shadow: 0 20px 30px -12px rgba(31,110,98,0.12);
+    }
+    .category-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 14px;
+    }
+    .category-card h4 {
+      font-weight: 600;
+      margin-top: 8px;
+      color: #1b4e45;
+    }
+
+    /* featured products grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 32px;
+      margin: 24px 0 48px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.25s;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+      border: 1px solid #edf3f1;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 36px -14px rgba(0, 0, 0, 0.12);
+      border-color: #cbe3dd;
+    }
+    .product-img {
+      width: 100%;
+      height: 220px;
+      background: #f3f9f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product-img img {
+      max-width: 85%;
+      max-height: 180px;
+      object-fit: contain;
+      transition: 0.2s;
+    }
+    .product-info {
+      padding: 20px 20px 24px;
+    }
+    .product-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .price {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #1f6e62;
+      margin: 12px 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      font-size: 0.85rem;
+      color: #8ba39e;
+      margin-left: 8px;
+      font-weight: 400;
+    }
+    .rating {
+      color: #f5b042;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+    .add-btn {
+      background: #eef3f1;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-family: inherit;
+      color: #1f6e62;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 6px;
+    }
+    .add-btn:hover {
+      background: #1f6e62;
+      color: white;
+    }
+
+    /* banner / unique section */
+    .unique-offer {
+      background: #dbeae6;
+      border-radius: 48px;
+      margin: 56px 0 48px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .offer-details {
+      flex: 1.2;
+      padding: 48px 40px;
+    }
+    .offer-details h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0c3b34;
+      margin-bottom: 12px;
+    }
+    .offer-details p {
+      margin: 16px 0;
+      color: #2c544c;
+    }
+    .offer-img {
+      flex: 1;
+      background: #bdd7d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .offer-img img {
+      max-width: 100%;
+      max-height: 240px;
+      object-fit: contain;
+    }
+
+    /* footer */
+    footer {
+      background: #0f2c27;
+      color: #cddfdb;
+      margin-top: 72px;
+      padding: 48px 0 30px;
+      border-radius: 32px 32px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .footer-col p, .footer-col li {
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #2a534a;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 780px) {
+      .hero {
+        padding: 32px 24px;
+      }
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    button {
+      background: none;
+      border: none;
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+</head>
+<body>
+<div class="top-bar">
+  🌟 FREE SHIPPING ON ORDERS OVER $49 + 30-DAY RETURNS | UNICART UNIQUE CLUB
+</div>
+<div class="container">
+  <header>
+    <div class="navbar">
+      <div class="logo-area">
+        <div class="logo-icon">🛒</div>
+        <div class="logo-text">
+          <h1>UniCart</h1>
+          <span>smart choices · unified style</span>
+        </div>
+      </div>
+      <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        <div class="cart-icon">
+          🛍️ Cart <span style="background:#1f6e62;color:white;padding:2px 8px;border-radius:30px;">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero section with high-quality ecom image -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="badge">✨ UNI EXCLUSIVE DROP</div>
+      <h2>Style meets <br>uniqueness.</h2>
+      <p>Discover curated collections that celebrate individuality — from bold fashion to smart gadgets. One cart, endless finds.</p>
+      <div class="btn-group">
+        <button class="btn-primary" id="exploreHeroBtn">Shop Now →</button>
+        <button class="btn-outline">UniCart+ Perks</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://placecats.com/neo/600/500?random=1" alt="hero shopping lifestyle" 
+           style="background:#e2f0ec; object-fit: cover;" 
+           onerror="this.onerror=null; this.src='https://picsum.photos/id/20/600/500'">
+      <!-- dynamic fallback: actual unique placeholder but we use high-res unsplash style via picsum -->
+    </div>
+  </div>
+
+  <!-- Category section with unique images -->
+  <div class="section-title">
+    Shop by Vibe <span>View all categories →</span>
+  </div>
+  <div class="category-grid">
+    <div class="category-card">
+      <img src="https://picsum.photos/id/0/100/100" alt="electronics">
+      <h4>⚡ Gadgets</h4>
+    </div>
+    <div class="category-card">
+      <img src="https://picsum.photos/id/20/100/100" alt="fashion">
+      <h4>👗 Fashion</h4>
+    </div>
+    <div class="category-card">
+      <img src="https://picsum.photos/id/26/100/100" alt="home decor">
+      <h4>🏡 Home & Living</h4>
+    </div>
+    <div class="category-card">
+      <img src="https://picsum.photos/id/29/100/100" alt="beauty">
+      <h4>💄 Beauty</h4>
+    </div>
+    <div class="category-card">
+      <img src="https://picsum.photos/id/39/100/100" alt="sports">
+      <h4>🎧 Audio / Sports</h4>
+    </div>
+  </div>
+
+  <!-- Featured products - UNIQUE products with images & pricing -->
+  <div class="section-title">
+    🌟 Featured Uniques <span>Limited edition drops →</span>
+  </div>
+  <div class="product-grid" id="productGrid">
+    <!-- products injected via JS for dynamic but also static structure; I'll fill unique items -->
+  </div>
+
+  <!-- Unique Offer Banner with original image -->
+  <div class="unique-offer">
+    <div class="offer-details">
+      <h3>📦 The UniCart Vault</h3>
+      <p>Members-only access to mystery boxes, early sales & 1-of-1 collaborations. Join 10k+ creators who shop unique.</p>
+      <button class="btn-primary" style="background:#0f3e37;">Unlock Exclusive →</button>
+    </div>
+    <div class="offer-img">
+      <img src="https://picsum.photos/id/146/300/200" alt="unique membership gift">
+    </div>
+  </div>
+
+</div> <!-- end container -->
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        
+    </div>
+    <div class="copyright">
+      © 2026 UniCart — Unique finds, unified cart. All visions reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // PRODUCT DATA with unique images and naming
+  const products = [
+    { id: 1, name: "Aether Glide sneakers", price: 89, oldPrice: 129, rating: 4.8, img: "https://picsum.photos/id/1/400/300", tag: "Limited" },
+    { id: 2, name: "Nebula wireless earbuds", price: 59, oldPrice: 99, rating: 4.6, img: "https://picsum.photos/id/3/400/300", tag: "Best seller" },
+    { id: 3, name: "Morph pendant light", price: 44, oldPrice: 68, rating: 4.9, img: "https://picsum.photos/id/10/400/300", tag: "New" },
+    { id: 4, name: "Eco leather backpack", price: 109, oldPrice: 159, rating: 4.7, img: "https://picsum.photos/id/12/400/300", tag: "Eco" },
+    { id: 5, name: "UniCart smart mug", price: 29, oldPrice: 45, rating: 4.5, img: "https://picsum.photos/id/30/400/300", tag: "Trending" },
+    { id: 6, name: "Minimalist desk mat", price: 34, oldPrice: 49, rating: 4.4, img: "https://picsum.photos/id/21/400/300", tag: "Office" },
+    { id: 7, name: "Hydra serum kit", price: 52, oldPrice: 78, rating: 4.9, img: "https://picsum.photos/id/38/400/300", tag: "Clean" },
+    { id: 8, name: "Chrono analog watch", price: 149, oldPrice: 199, rating: 4.8, img: "https://picsum.photos/id/82/400/300", tag: "Luxury feel" }
+  ];
+
+  const productGrid = document.getElementById('productGrid');
+  function renderProducts() {
+    if (!productGrid) return;
+    productGrid.innerHTML = '';
+    products.forEach(prod => {
+      const stars = '★'.repeat(Math.floor(prod.rating)) + '☆'.repeat(5 - Math.floor(prod.rating));
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <div class="product-img">
+          <img src="${prod.img}" alt="${prod.name}" loading="lazy" onerror="this.src='https://picsum.photos/id/20/400/300'">
+        </div>
+        <div class="product-info">
+          <div style="display: flex; justify-content: space-between;"><h3>${prod.name}</h3> <span style="background:#f0f3f1; padding:2px 8px; border-radius:30px; font-size:11px;">${prod.tag}</span></div>
+          <div class="price">$${prod.price} ${prod.oldPrice ? `<span class="old-price">$${prod.oldPrice}</span>` : ''}</div>
+          <div class="rating">${stars} ${prod.rating}</div>
+          <button class="add-btn" data-id="${prod.id}" data-name="${prod.name}" data-price="${prod.price}">➕ Add to Cart</button>
+        </div>
+      `;
+      productGrid.appendChild(card);
+    });
+
+    // attach cart events after rendering
+    document.querySelectorAll('.add-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const name = btn.getAttribute('data-name');
+        const price = btn.getAttribute('data-price');
+        updateCartNotification(name, price);
+      });
+    });
+  }
+
+  // Simple cart counter and notification
+  let cartCount = 0;
+  const cartSpan = document.querySelector('.cart-icon span');
+  function updateCartNotification(productName, price) {
+    cartCount++;
+    if(cartSpan) cartSpan.innerText = cartCount;
+    // toast style message
+    const toast = document.createElement('div');
+    toast.innerText = `✨ ${productName} added — $${price}`;
+    toast.style.position = 'fixed';
+    toast.style.bottom = '24px';
+    toast.style.right = '24px';
+    toast.style.backgroundColor = '#1f6e62';
+    toast.style.color = 'white';
+    toast.style.padding = '12px 24px';
+    toast.style.borderRadius = '60px';
+    toast.style.fontWeight = '500';
+    toast.style.zIndex = '999';
+    toast.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+    toast.style.backdropFilter = 'blur(4px)';
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.style.opacity = '0'; toast.style.transition='0.2s'; setTimeout(() => toast.remove(), 500); }, 1800);
+  }
+
+  // also handling hero button event (demo)
+  document.getElementById('exploreHeroBtn')?.addEventListener('click', () => {
+    alert("✨ Welcome to UniCart — start exploring our unique collections!");
+    window.scrollTo({ top: 700, behavior: 'smooth' });
+  });
+
+  // update hero image to ensure unique high-quality ecomm representation
+  // we also manually set fixed images for categories but they already use picsum variety.
+  // additionally modify hero image to a better ecom-like visual (more unique)
+  const heroImg = document.querySelector('.hero-image img');
+  if(heroImg) {
+    // set to a friendly ecommerce image showing shopping / tech / nature
+    heroImg.src = "https://picsum.photos/id/26/620/480";  // bench with nature but works as lifestyle
+    heroImg.alt = "UniCart shopping inspiration";
+    heroImg.style.objectFit = "cover";
+    heroImg.style.borderRadius = "32px";
+    // if broken fallback
+    heroImg.onerror = () => { heroImg.src = "https://picsum.photos/id/0/620/480"; };
+  }
+
+  // also replace category images with cleaner unique alternatives
+  const categoryImgs = document.querySelectorAll('.category-card img');
+  const categorySrcSet = [
+    "https://picsum.photos/id/0/100/100",   // tech
+    "https://picsum.photos/id/2/100/100",   // fashion
+    "https://picsum.photos/id/106/100/100", // flower vase home
+    "https://picsum.photos/id/17/100/100",  // beauty
+    "https://picsum.photos/id/96/100/100"   // music
+  ];
+  categoryImgs.forEach((img, idx) => {
+    if(idx < categorySrcSet.length) img.src = categorySrcSet[idx];
+  });
+
+  renderProducts();
+
+  // secondary unique interactive: add a hover effect + dynamic category alert for uniqueness
+  const categoryCards = document.querySelectorAll('.category-card');
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const catName = card.querySelector('h4')?.innerText || 'category';
+      alert(`🔍 Explore ${catName} — new unique arrivals coming soon.`);
+    });
+  });
+
+  // animated counter for cart placeholder? done via cart addition
+  // extra: style the unique-offer image to ensure it loads correctly
+  const offerImgDiv = document.querySelector('.offer-img img');
+  if(offerImgDiv) offerImgDiv.src = "https://picsum.photos/id/145/300/200"; // unique gift idea
+
+  // final touch: add a tiny "uniqueness" badge
+  const styleTag = document.createElement('style');
+  styleTag.textContent = `
+    .product-card .add-btn:active { transform: scale(0.97); }
+    ::selection { background: #cbe3dd; color:#0c2e28; }
+  `;
+  document.head.appendChild(styleTag);
+</script>
+</body>
+</html>
